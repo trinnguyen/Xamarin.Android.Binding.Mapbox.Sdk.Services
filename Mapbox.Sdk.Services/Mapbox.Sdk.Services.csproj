@@ -55,9 +55,6 @@
     <Reference Include="GoogleGson">
       <HintPath>..\packages\GoogleGson.2.8.1\lib\MonoAndroid\GoogleGson.dll</HintPath>
     </Reference>
-    <Reference Include="Mapbox.Sdk.Geojson">
-      <HintPath>..\packages\Kwon.Mapbox.Sdk.Geojson.3.3.0.1\lib\monoandroid81\Mapbox.Sdk.Geojson.dll</HintPath>
-    </Reference>
     <Reference Include="Java.Interop" />
     <Reference Include="Square.OkIO">
       <HintPath>..\packages\Square.OkIO.1.13.0\lib\MonoAndroid\Square.OkIO.dll</HintPath>
@@ -76,6 +73,12 @@
     </Reference>
     <Reference Include="Mapbox.Sdk.Core">
       <HintPath>..\packages\Kwon.Mapbox.Sdk.Core.3.3.0.1\lib\monoandroid81\Mapbox.Sdk.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Mapbox.Sdk.Geojson">
+      <HintPath>..\packages\Kwon.Mapbox.Sdk.Geojson.3.3.0.2\lib\monoandroid81\Mapbox.Sdk.Geojson.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

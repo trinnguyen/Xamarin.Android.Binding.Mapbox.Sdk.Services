@@ -15,12 +15,13 @@
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <AndroidClassParser>class-parse</AndroidClassParser>
     <PackageId>Kwon.Mapbox.Sdk.Services</PackageId>
-    <PackageVersion>3.3.0.1</PackageVersion>
+    <PackageVersion>3.3.0.2</PackageVersion>
     <Authors>Brad Kwon</Authors>
     <PackageLicenseUrl>https://github.com/BradKwon/Xamarin.Android.Binding.Mapbox.Sdk.Services/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>Brad Kwon</Owners>
     <PackageProjectUrl>https://github.com/BradKwon/Xamarin.Android.Binding.Mapbox.Sdk.Services</PackageProjectUrl>
-    <PackageReleaseNotes>Initial release of Mapbox.Sdk.Services 3.3.0</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated Kwon.Mapbox.Sdk.Geojson to v3.3.0.2
+Added sample code</PackageReleaseNotes>
     <PackageTags>Mapbox SDK Services Xamarin Android</PackageTags>
     <Title>Mapbox SDK Services binding library for Xamarin.Android</Title>
     <Description>Mapbox SDK Services binding library for Xamarin.Android</Description>

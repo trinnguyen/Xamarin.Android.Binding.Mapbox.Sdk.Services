@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{358AA8F1-8D64-4BFE-9BC1-9A7ED19D5CEB}</ProjectGuid>
-    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{69FCD618-5F3A-4C13-92A4-EB381129F56B}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Mapbox.Sdk.Services</RootNamespace>
-    <AssemblyName>Mapbox.Sdk.Services</AssemblyName>
+    <RootNamespace>Samples</RootNamespace>
+    <AssemblyName>Samples</AssemblyName>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <AndroidClassParser>class-parse</AndroidClassParser>
-    <PackageId>Kwon.Mapbox.Sdk.Services</PackageId>
-    <PackageVersion>3.3.0.1</PackageVersion>
-    <Authors>Brad Kwon</Authors>
-    <PackageLicenseUrl>https://github.com/BradKwon/Xamarin.Android.Binding.Mapbox.Sdk.Services/blob/master/LICENSE</PackageLicenseUrl>
-    <Owners>Brad Kwon</Owners>
-    <PackageProjectUrl>https://github.com/BradKwon/Xamarin.Android.Binding.Mapbox.Sdk.Services</PackageProjectUrl>
-    <PackageReleaseNotes>Initial release of Mapbox.Sdk.Services 3.3.0</PackageReleaseNotes>
-    <PackageTags>Mapbox SDK Services Xamarin Android</PackageTags>
-    <Title>Mapbox SDK Services binding library for Xamarin.Android</Title>
-    <Description>Mapbox SDK Services binding library for Xamarin.Android</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,7 +26,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <JavaMaximumHeapSize></JavaMaximumHeapSize>
+    <AndroidSupportedAbis>arm64-v8a;armeabi-v7a;x86</AndroidSupportedAbis>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,7 +39,7 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <JavaMaximumHeapSize></JavaMaximumHeapSize>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -54,6 +48,9 @@
     <Reference Include="Mono.Android" />
     <Reference Include="GoogleGson">
       <HintPath>..\packages\GoogleGson.2.8.1\lib\MonoAndroid\GoogleGson.dll</HintPath>
+    </Reference>
+    <Reference Include="Squareup.OkHttp3.Logging-interceptor">
+      <HintPath>..\packages\Kwon.Squareup.OkHttp3.Logging-interceptor.3.9.1.1\lib\monoandroid81\Squareup.OkHttp3.Logging-interceptor.dll</HintPath>
     </Reference>
     <Reference Include="Java.Interop" />
     <Reference Include="Square.OkIO">
@@ -64,9 +61,6 @@
     </Reference>
     <Reference Include="Square.Retrofit2">
       <HintPath>..\packages\Kwon.Square.Retrofit2.2.3.0.1\lib\monoandroid81\Square.Retrofit2.dll</HintPath>
-    </Reference>
-    <Reference Include="Squareup.OkHttp3.Logging-interceptor">
-      <HintPath>..\packages\Kwon.Squareup.OkHttp3.Logging-interceptor.3.9.1.1\lib\monoandroid81\Squareup.OkHttp3.Logging-interceptor.dll</HintPath>
     </Reference>
     <Reference Include="Squareup.Retrofit2.Retrofit-converter">
       <HintPath>..\packages\Kwon.Squareup.Retrofit2.Retrofit-converter.2.3.0.1\lib\monoandroid81\Squareup.Retrofit2.Retrofit-converter.dll</HintPath>
@@ -82,22 +76,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Additions\EmptyClass.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Additions\AboutAdditions.txt" />
-    <None Include="Jars\AboutJars.txt" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <TransformFile Include="Transforms\EnumFields.xml" />
-    <TransformFile Include="Transforms\EnumMethods.xml" />
-    <TransformFile Include="Transforms\Metadata.xml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\layout\MainLayout.axml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedJar Include="Jars\mapbox-sdk-services-3.3.0.jar" />
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\layout\" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
-  <Import Project="..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets')" />
+  <ItemGroup>
+    <ProjectReference Include="..\Mapbox.Sdk.Services\Mapbox.Sdk.Services.csproj">
+      <Project>{358AA8F1-8D64-4BFE-9BC1-9A7ED19D5CEB}</Project>
+      <Name>Mapbox.Sdk.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

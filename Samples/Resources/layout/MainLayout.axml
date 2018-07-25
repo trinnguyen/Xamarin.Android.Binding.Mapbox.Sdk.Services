@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/BasicDirectionsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Basic Directions" />
+    <Button
+        android:id="@+id/BasicFeatureCollectionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Basic Feature Collection" />
+    <Button
+        android:id="@+id/BasicGeocodingButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Basic Geocoding" />
+    <Button
+        android:id="@+id/BasicMapMatchingButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Basic MapMatching" />
+    <Button
+        android:id="@+id/BasicOptimizationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Basic Optimization" />
+    <Button
+        android:id="@+id/BasicSpeechButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Basic Speech" />
+    <Button
+        android:id="@+id/BasicStaticMapButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Basic Static Map" />
+</LinearLayout>

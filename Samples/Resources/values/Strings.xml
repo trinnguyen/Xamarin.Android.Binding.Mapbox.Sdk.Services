@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="access_token">YOUR_ACCESS_TOKEN</string>
+    <string name="app_name">Samples</string>
+</resources>
